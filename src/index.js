@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {applyMiddleware, createStore} from 'redux'
-import rootReducer from './redux/reducers/index'
 import { Provider } from 'react-redux';
 import userReducer from './redux/reducers/user'
 const store = createStore(userReducer, applyMiddleware())

@@ -1,0 +1,5 @@
+const { default: SignIn } = require("../components/login/SignIn");
+
+{
+  "signIn.welcome": "Sign In",
+}

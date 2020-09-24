@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as ACTIONS from '../../redux/actions/action'
 import SignIn from './SignIn'
+//import '../../css/Login.scss'
 class Login extends Component {
   state = {
       showSignIn: true,
