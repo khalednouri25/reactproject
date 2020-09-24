@@ -6,7 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import {applyMiddleware, createStore} from 'redux'
 import rootReducer from './redux/reducers/index'
 import { Provider } from 'react-redux';
-const store = createStore(rootReducer, applyMiddleware())
+import userReducer from './redux/reducers/user'
+const store = createStore(userReducer, applyMiddleware())
+// to print the global state
+//console.log(store.getState())
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

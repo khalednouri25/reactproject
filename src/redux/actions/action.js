@@ -1,13 +1,11 @@
-import * as ACTIONS_TYPES from './actions_types'
-export const success = () => {
+import * as ACTIONS_TYPES from './action_types'
+
+
+export const USER_INPUT = (user) => 
+{  
     return {
-        type: ACTIONS_TYPES.SUCCESS
+        type: ACTIONS_TYPES.USER_INPUT,
+        payload: user
     }
 }
 
-export const user_input = (text) => {
-    return {
-        type: ACTIONS_TYPES.INPUT_USER, 
-        payload: text
-    }
-}

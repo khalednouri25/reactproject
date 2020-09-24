@@ -1,15 +1,15 @@
 import * as ACTION_TYPES from './../actions/action_types'
 
 const initialState = {
-    user_text: ''
+    userInput: ''
 }
 
 const userReducer = (state = initialState, action) => {
     switch(action.type) {
-        case ACTION_TYPES.INPUT_USER: 
+        case ACTION_TYPES.USER_INPUT: 
         return {
-            ...state, 
-            user_text: action.payload
+            ...state,
+            userInput: action.payload
         }
         default: 
         return state
