@@ -3,9 +3,9 @@ import classnames from 'classnames'
 import '../../css/Login.SignIn.scss'
 class SignIn extends Component{
   state = {
-    userName: '',
+    email: '',
     password: '',
-    errorUserName: false,
+    errorEmail: false,
     errorPassword: false, 
     showPassword: false
   }
@@ -18,12 +18,16 @@ class SignIn extends Component{
 
   }
 
+  onToggleClick = () => {
+
+  }
+
 
   render  () {
 
     let userClass = '',
     passwordClass = ''
-    if (this.state.userName.length > 0) {
+    if (this.state.email.length > 0) {
       userClass = 'field'
     }
 
@@ -39,14 +43,14 @@ class SignIn extends Component{
           <form onSubmit={this.onFormSubmit}>
             <div className="offset">
               <div className="form-label">
-                User Name:
+                Email:
               </div>
               <input
                 type="text"
                 onChange={this.handleChage}
-                value={this.state.userName}
-                placeholder="User Name"
-                className={classnames('form-signIn', userClass, {invalid: this.state.errorUserName})}
+                value={this.state.email}
+                placeholder="Email"
+                className={classnames('form-signIn', userClass, {invalid: this.state.errorEmail})}
                 />
               <div classnames="form-label">
                   Password:
@@ -58,6 +62,10 @@ class SignIn extends Component{
                 placeholder="Password"
                 className={classnames('form-signIn', passwordClass, {invalid: this.state.errorPassword})}
               />
+
+              <div className={classnames('toggle-password', passwordClass, {open: this.state.showP})}
+                onClick={this.onToggleClick}>
+              </div>
 
               <button type="submit" className="submit-button">
                 Confirm
